@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رحلة حبنا الصغيرة</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #ffe6f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+        .container {
+            text-align: center;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
+            width: 90%;
+            max-width: 450px;
+            position: relative;
+            z-index: 10;
+            border: 3px solid #ffb6c1;
+        }
+        h1 {
+            color: #d81b60;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .stage-container {
+            margin: 20px 0;
+            min-height: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .characters {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            transition: all 0.5s ease;
+        }
+        .character {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+        .avatar {
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #ff69b4;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .name {
+            margin-top: 8px;
+            font-weight: bold;
+            color: #ad1457;
+        }
+        .message {
+            font-size: 16px;
+            color: #880e4f;
+            margin-top: 20px;
+            line-height: 1.6;
+            min-height: 60px;
+            font-weight: 600;
+        }
+        .btn {
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(255, 64, 129, 0.4);
+            transition: background 0.3s, transform 0.2s;
+            font-weight: bold;
+        }
+        .btn:hover {
+            background-color: #f50057;
+            transform: scale(1.05);
+        }
+        .heart-rain {
+            position: absolute;
+            top: -10px;
+            color: #ff1493;
+            font-size: 20px;
+            animation: fall linear forwards;
+            z-index: 1;
+        }
+        @keyframes fall {
+            to {
+                transform: translateY(105vh) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>رحلة حبنا</h1>
+        <div class="stage-container">
+            <div class="characters" id="charBox">
+                <div class="character">
+                    <div class="avatar" id="kittyAvatar" style="width: 80px; height: 80px; background: #ffb6c1; display:flex; justify-content:center; align-items:center; font-size:35px;">🐱</div>
+                    <span class="name">هيلو كيتي</span>
+                </div>
+                <div class="character">
+                    <div class="avatar" id="danielAvatar" style="width: 80px; height: 80px; background: #ffc0cb; display:flex; justify-content:center;
